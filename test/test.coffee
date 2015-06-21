@@ -13,7 +13,7 @@ plugin     = require '..'
 describe 'metalsmith-copy-assets', () ->
 
    beforeEach (done) ->
-      rimraf 'build', done
+      rimraf __dirname + '/build', done
       
    describe 'with folder', ()->
       
@@ -109,3 +109,7 @@ describe 'metalsmith-copy-assets', () ->
                should.exist(err)
                done()
 
+
+   afterEach (done) ->
+      rimraf __dirname + '/build', done
+      
