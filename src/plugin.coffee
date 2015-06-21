@@ -21,8 +21,7 @@ module.exports = (options) ->
 
    identifyFolder = (source, done) ->
       fs.stat source.path, (err, stats) ->
-         console.error "File not found: " + source.path if not stats?
-         return done(err) if err?
+         return done(new Error "File not found: " + source.path) if err?
          source.isDir = stats.isDirectory()
          done()
             
