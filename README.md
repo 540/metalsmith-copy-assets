@@ -50,3 +50,14 @@ Files in `src` should be specified relative to the folder Metalsmith is running 
 The `dest` property should be a directory, and is specified relative to the metalsmith output folder (i.e. the `build` folder).   If no `dest` property is specified, files will be copied into the `build` folder.
 
 The plugin will generate an error if any of the files or folders are not found.  Currently the plugin does not recursively copy folder trees.  If you give it a folder name, it expects to find and copy only files in that folder.
+
+
+Tests
+-----
+   
+`$ npm test`
+   
+Licence
+-------
+
+GPLv2
